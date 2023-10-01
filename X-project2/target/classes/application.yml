@@ -1,0 +1,25 @@
+#配置服务器端口
+server:
+  port: 9999
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql:///xdb
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      port: 6379
+      host: localhost
+
+logging:
+  level:
+    com.atchen: debug
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      logic-delete-field: deleted
+  type-aliases-package: com.atchen.*.entity
